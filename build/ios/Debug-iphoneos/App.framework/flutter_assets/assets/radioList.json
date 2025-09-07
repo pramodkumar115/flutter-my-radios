@@ -1,0 +1,247 @@
+[
+    {
+      "id": "1",
+      "nameOfStation": "Hello fm Chennai",
+      "urllink": "https://listen.openstream.co/4428/audio"
+    },
+    {
+      "id": "2",
+      "nameOfStation": "Nepaliko",
+      "urllink": "https://stream.zeno.fm/fvrx47wpg0quv"
+    },
+    {
+      "id": "3",
+      "nameOfStation": "Suriyan",
+      "urllink": "https://24973.live.streamtheworld.com/RADIO_SUNO_TAMIL_S01.mp3"
+    },
+    {
+      "id": "4",
+      "nameOfStation": "Janadhwani Mysuru",
+      "urllink": "https://streamasiacdn.atc-labs.com/metradio.aac"
+    },
+    {
+      "id": "5",
+      "nameOfStation": "Hungama",
+      "urllink": "https://stream.zeno.fm/sp3ojikskyhvv"
+    },
+    {
+      "id": "6",
+      "nameOfStation": "Sonunigam",
+      "urllink": "https://drive.uber.radio/uber/bollywoodsonunigam/icecast.audio"
+    },
+    {
+      "id": "7",
+      "nameOfStation": "Mirchie Hindi",
+      "urllink": "https://playerservices.streamtheworld.com/api/livestream-redirect/NJS_HIN_ESTAAC.m3u8"
+    },
+    {
+      "id": "8",
+      "nameOfStation": "Radio Kavalam",
+      "urllink": "https://stream.zeno.fm/xdk7c5stquhvv?adtonosListenerId=01JE2ZBTPH30Z28A4R4PESS0SG&aw_0_req_lsid=52518c8cb6dcf7afa22936184b01bd5c"
+    },
+    {
+      "id": "9",
+      "nameOfStation": "JSS",
+      "urllink": "https://streamasiacdn.atc-labs.com/jssradio.aac"
+    },
+    {
+      "id": "10",
+      "nameOfStation": "Venudhwani",
+      "urllink": "https://streamasiacdn.atc-labs.com/Klevenudhwani.aac"
+    },
+    {
+      "id": "11",
+      "nameOfStation": "Jandhwani",
+      "urllink": "https://streamasiacdn.atc-labs.com/metradio.aac"
+    },
+    {
+      "id": "12",
+      "nameOfStation": "Spicy",
+      "urllink": "https://stream.zeno.fm/mwzoobifkbruv"
+    },
+    {
+      "id": "13",
+      "nameOfStation": "Gramin Bharathi",
+      "urllink": "https://streamasiacdn.atc-labs.com/dskradio.aac"
+    },
+    {
+      "id": "14",
+      "nameOfStation": "Namdu 1 radio",
+      "urllink": "https://stream.zeno.fm/n0nhm03nf5zuv"
+    },
+    {
+      "id": "15",
+      "nameOfStation": "Sahakara",
+      "urllink": "https://streamasiacdn.atc-labs.com/kvkhulkoti.aac"
+    },
+    {
+      "id": "16",
+      "nameOfStation": "Raj",
+      "urllink": "https://stream.zeno.fm/wq1gooxlumqvv"
+    },
+    {
+      "id": "17",
+      "nameOfStation": "Radio Kushi",
+      "urllink": "https://centova.aarenworld.com/proxy/922radiokhushi/stream"
+    },
+    {
+      "id": "18",
+      "nameOfStation": "Siri Sampada",
+      "urllink": "https://stream-152.zeno.fm/rk71xz6mq18uv?zs=4KqiAYnAQw-O-zBZUsu-iQ&aw_0_req_lsid=a99e15fac316c6c3fcfae166b1d26662&acu-uid=827052627773&an-uid=5195470833953679252&mm-uid=3ee66498-444d-4800-a5d2-6138206af45d&dot-uid=098f220400e2b7b1e90db8d5&amb-uid=40126070"
+    },
+    {
+      "id": "19",
+      "nameOfStation": "Nudi",
+      "urllink": "https://stream-151.zeno.fm/en4wu0vg74zuv?zs=O_h81agmTlWu6I1MG1zb3Q&aw_0_req_lsid=a99e15fac316c6c3fcfae166b1d26662&acu-uid=827052627773&an-uid=5195470833953679252&mm-uid=3ee66498-444d-4800-a5d2-6138206af45d&dot-uid=098f220400e2b7b1e90db8d5&amb-uid=40126070"
+    },
+    {
+      "id": "20",
+      "nameOfStation": "Silk City",
+      "urllink": "https://stream-151.zeno.fm/6ekpcfpf1d0uv?zs=QyQGKBc8Qz-_oSBWo40nRA&aw_0_req_lsid=a99e15fac316c6c3fcfae166b1d26662&acu-uid=827052627773&an-uid=5195470833953679252&mm-uid=3ee66498-444d-4800-a5d2-6138206af45d&dot-uid=098f220400e2b7b1e90db8d5&amb-uid=40126070"
+    },
+    {
+      "id": "21",
+      "nameOfStation": "Radio coffee",
+      "urllink": "https://stream-150.zeno.fm/68zy24s6gc9uv?zs=0kCX5WsATQ-XBQfcdMUWbA&aw_0_req_lsid=a99e15fac316c6c3fcfae166b1d26662&acu-uid=827052627773&an-uid=5195470833953679252&mm-uid=3ee66498-444d-4800-a5d2-6138206af45d&dot-uid=098f220400e2b7b1e90db8d5&amb-uid=40126070"
+    },
+    {
+      "id": "22",
+      "nameOfStation": "All in one",
+      "urllink": "https://stream-151.zeno.fm/dvgcdueuhqnuv?zs=TuaFra4uQ7OTfUoyWn-rQQ&aw_0_req_lsid=a99e15fac316c6c3fcfae166b1d26662&acu-uid=827052627773&an-uid=5195470833953679252&mm-uid=3ee66498-444d-4800-a5d2-6138206af45d&dot-uid=098f220400e2b7b1e90db8d5&amb-uid=40126070"
+    },
+    {
+      "id": "23",
+      "nameOfStation": "Just Matmatali",
+      "urllink": "https://stream-151.zeno.fm/dvgcdueuhqnuv?zs=TuaFra4uQ7OTfUoyWn-rQQ&aw_0_req_lsid=a99e15fac316c6c3fcfae166b1d26662&acu-uid=827052627773&an-uid=5195470833953679252&mm-uid=3ee66498-444d-4800-a5d2-6138206af45d&dot-uid=098f220400e2b7b1e90db8d5&amb-uid=40126070"
+    },
+    {
+      "id": "24",
+      "nameOfStation": "Anbu",
+      "urllink": "https://stream-151.zeno.fm/rketbsyc5uhvv?zs=jKnDdVEpTz2U29nmE_mRqA&aw_0_req_lsid=a99e15fac316c6c3fcfae166b1d26662&acu-uid=827052627773&an-uid=5195470833953679252&mm-uid=3ee66498-444d-4800-a5d2-6138206af45d&dot-uid=098f220400e2b7b1e90db8d5&amb-uid=40126070"
+    },
+    {
+      "id": "25",
+      "nameOfStation": "Power",
+      "urllink": "https://stream-151.zeno.fm/rketbsyc5uhvv?zs=jKnDdVEpTz2U29nmE_mRqA&aw_0_req_lsid=a99e15fac316c6c3fcfae166b1d26662&acu-uid=827052627773&an-uid=5195470833953679252&mm-uid=3ee66498-444d-4800-a5d2-6138206af45d&dot-uid=098f220400e2b7b1e90db8d5&amb-uid=40126070"
+    },
+    {
+      "id": "26",
+      "nameOfStation": "Geet",
+      "urllink": "https://server.geetradio.com:8040/radio.mp3"
+    },
+    {
+      "id": "27",
+      "nameOfStation": "AMR",
+      "urllink": "https://stream.zeno.fm/7g8axtgtsg0uv"
+    },
+    {
+      "id": "28",
+      "nameOfStation": "Panchajanya",
+      "urllink": "https://worldradio.online/proxy/?q=http://nap.casthost.net:8936/stream"
+    },
+    {
+      "id": "29",
+      "nameOfStation": "Daiji",
+      "urllink": "https://18193.live.streamtheworld.com/SAM08AAC013_SC"
+    },
+    {
+      "id": "30",
+      "nameOfStation": "Sarang",
+      "urllink": "https://listen.radiosarang.com/"
+    },
+    {
+      "id": "31",
+      "nameOfStation": "Madhur Tarang",
+      "urllink": "https://stream.zeno.fm/v0gde6udfg8uv"
+    },
+    {
+      "id": "32",
+      "nameOfStation": "Premaloka",
+      "urllink": "https://stream.zeno.fm/68snnbug8rhvv"
+    },
+    {
+      "id": "33",
+      "nameOfStation": "Radio Fresh",
+      "urllink": "https://worldradio.online/proxy/?q=http://85.25.185.202:8625/stream"
+    },
+    {
+      "id": "34",
+      "nameOfStation": "Radio City",
+      "urllink": "https://server.geetradio.com:8040/radio.mp3"
+    },
+    {
+      "id": "35",
+      "nameOfStation": "Radio Suno",
+      "urllink": "https://16603.live.streamtheworld.com/RADIO_SUNO_MELODY_S06.mp3"
+    },
+    {
+      "id": "36",
+      "nameOfStation": "Vaigai FM",
+      "urllink": "https://cast1.my-control-panel.com/proxy/geethan3/stream"
+    },
+    {
+      "id": "37",
+      "nameOfStation": "Hiphop",
+      "urllink": "https://radio.garden/api/ara/content/listen/w2QWvjjq/channel.mp3?1751381438741"
+    },
+    {
+      "id": "38",
+      "nameOfStation": "Shalombeats Kannada",
+      "urllink": "https://radio.garden/api/ara/content/listen/Z5NXd3rl/channel.mp3?1751381300712"
+    },
+    {
+      "id": "39",
+      "nameOfStation": "Radio Ninada",
+      "urllink": "https://radio.garden/api/ara/content/listen/x82h7XpU/channel.mp3?1751380562738"
+    },
+    {
+      "id": "40",
+      "nameOfStation": "Kannada Gospel",
+      "urllink": "https://radio.garden/api/ara/content/listen/ERNaXbwz/channel.mp3?1751380503320"
+    },
+    {
+      "id": "41",
+      "nameOfStation": "FEBA Online",
+      "urllink": "https://radio.garden/api/ara/content/listen/pLuTPO4F/channel.mp3?1751379150662"
+    },
+    {
+      "id": "42",
+      "nameOfStation": "Nam Radio USA",
+      "urllink": "https://radio.garden/api/ara/content/listen/VXCrP8il/channel.mp3?1751379069025"
+    },
+    {
+      "id": "43",
+      "nameOfStation": "Satyatmavani Radio",
+      "urllink": "https://radio.garden/api/ara/content/listen/nBANPCQH/channel.mp3?1751378974238"
+    },
+    {
+      "id": "44",
+      "nameOfStation": "V V Radio",
+      "urllink": "https://radio.garden/api/ara/content/listen/S91d2Yxj/channel.mp3?1751378614116"
+    },
+    {
+      "id": "45",
+      "nameOfStation": "Sakkath Radio",
+      "urllink": "https://radio.garden/api/ara/content/listen/cFIsz00A/channel.mp3?1751378533059"
+    },
+    {
+      "id": "46",
+      "nameOfStation": "Mangaluru",
+      "urllink": "https://radio.garden/api/ara/content/listen/G2USMtbY/channel.mp3?1751378448227"
+    },
+    {
+      "id": "47",
+      "nameOfStation": "Shivamogga",
+      "urllink": "https://radio.garden/api/ara/content/listen/nJpOakm5/channel.mp3?1751378072195"
+    },
+    {
+      "id": "48",
+      "nameOfStation": "Kundapura",
+      "urllink": "https://radio.garden/api/ara/content/listen/r2EYixRI/channel.mp3?1751377723693"
+    },
+    {
+      "id": "49",
+      "nameOfStation": "Radio Girmit",
+      "urllink": "https://stream.radiojar.com/g6dgm6m6p3hvv"
+    }
+  ]

@@ -1,0 +1,13 @@
+dependencies: \
+  /Users/pramodkumar/projects/learn-flutter/my_radios/build/macos/Build/Intermediates.noindex/Pods.build/Debug/just_audio.build/module.modulemap \
+  /Users/pramodkumar/.pub-cache/hosted/pub.dev/just_audio-0.9.37/macos/Classes/ClippingAudioSource.m \
+  /Users/pramodkumar/projects/learn-flutter/my_radios/macos/Pods/Target\ Support\ Files/just_audio/just_audio-prefix.pch \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Cocoa.framework/Modules/module.modulemap \
+  /Users/pramodkumar/.pub-cache/hosted/pub.dev/just_audio-0.9.37/macos/Classes/AudioSource.h \
+  /Users/pramodkumar/development/flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.framework/Modules/module.modulemap \
+  /Users/pramodkumar/.pub-cache/hosted/pub.dev/just_audio-0.9.37/macos/Classes/ClippingAudioSource.h \
+  /Users/pramodkumar/.pub-cache/hosted/pub.dev/just_audio-0.9.37/macos/Classes/UriAudioSource.h \
+  /Users/pramodkumar/.pub-cache/hosted/pub.dev/just_audio-0.9.37/macos/Classes/IndexedAudioSource.h \
+  /Users/pramodkumar/.pub-cache/hosted/pub.dev/just_audio-0.9.37/macos/Classes/IndexedPlayerItem.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AVFoundation.framework/Modules/module.modulemap \
+  /Users/pramodkumar/.pub-cache/hosted/pub.dev/just_audio-0.9.37/macos/Classes/LoadControl.h
