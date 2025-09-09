@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_radios/RadioLists/radio_list_home_view.dart';
 import 'package:my_radios/RadioLists/radio_list_view.dart';
 import 'package:my_radios/util/helper.util.dart';
 
@@ -46,15 +47,15 @@ class _AppState extends State<App> with SingleTickerProviderStateMixin {
         body: Form(
           child: Column(children: [
             TabBar(controller: tabController, tabs: const [
-              Tab(text: "Radio List1"),
+              Tab(text: "Radio List"),
               Tab(text: "My Favorites"),
               Tab(text: "Playlist")
             ]),
             Expanded(
               child: TabBarView(controller: tabController, children: const [
-                RadioListView(tabType: "radioList"),
-                RadioListView(tabType: "fav"),
-                RadioListView(tabType: "playList")
+                RadioListHomeView(tabType: "radioList"),
+                RadioListHomeView(tabType: "fav"),
+                RadioListHomeView(tabType: "playList")
               ]),
             )
           ]),
