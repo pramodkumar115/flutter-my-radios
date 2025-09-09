@@ -1,0 +1,41 @@
+# Flutter specific
+.flutter-plugins
+.DS_Store
+.dart_tool/
+.packages
+.pub/
+build/
+doc/api/
+pubspec.lock # Generally ignored, but can be included if specific package versions need to be strictly enforced.
+
+# Android specific
+android/app/google-services.json # If sensitive or specific to a local setup
+android/key.properties
+android/.gradle/
+android/app/build/
+android/app/.cxx/
+android/app/src/main/assets/flutter_assets/
+android/gradle/wrapper/gradle-wrapper.jar
+
+# iOS specific
+ios/.generated/
+ios/Podfile.lock
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Generated.xcconfig
+ios/Flutter/Debug.xcconfig
+ios/Flutter/Release.xcconfig
+ios/Runner.xcworkspace/contents.xcworkspacedata
+
+# IDE related (e.g., IntelliJ/Android Studio, VS Code)
+.idea/
+*.iml
+*.iws
+.vscode/
+
+# User-specific or sensitive files
+*.env
+*.env.*
+*.log
+*.lock
+# Add any other files containing sensitive information or local configurations
