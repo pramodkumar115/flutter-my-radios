@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:my_radios/RadioLists/radio_list_home_view.dart';
-import 'package:my_radios/RadioLists/radio_list_view.dart';
 import 'package:my_radios/util/helper.util.dart';
 
 
@@ -24,7 +23,6 @@ class _AppState extends State<App> with SingleTickerProviderStateMixin {
         searchText = _controller.text;
       });
     });
-    writeData('my_data.txt', 'Hello World!');
   }
 
   @override
@@ -55,7 +53,8 @@ class _AppState extends State<App> with SingleTickerProviderStateMixin {
               child: TabBarView(controller: tabController, children: const [
                 RadioListHomeView(tabType: "radioList"),
                 RadioListHomeView(tabType: "fav"),
-                RadioListHomeView(tabType: "playList")
+                // RadioListHomeView(tabType: "playList")
+                Center(child: Text("Under Construction"))
               ]),
             )
           ]),

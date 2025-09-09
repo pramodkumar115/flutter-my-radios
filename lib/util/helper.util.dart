@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:my_radios/RadioLists/radio_item.dart';
 import 'package:path_provider/path_provider.dart';
 
 Future<String> get _localPath async {
@@ -26,14 +27,33 @@ Future<File> writeData(String filename, String data) async {
 Future<String> readFile(String fileName) async {
   try {
     final file = await _localFile(fileName);
-    if (true == file.exists()) {
-      // Read the file content as a string
-      String contents = await file.readAsString();
-      return contents;
-    }
-    return "";
+    // Read the file content as a string
+    String contents = await file.readAsString();
+    return contents;
   } catch (e) {
     print("Error reading file: $e");
     return "";
   }
 }
+
+List<RadioItem> getItems(List<RadioItem> items, String tabType, List<String> favoritesFileData) {
+    if (tabType == 'radioList') {
+      return items;
+    }
+    if (tabType == 'fav') {
+      return items
+          .where((item) => favoritesFileData.contains(item.id))
+          .toList();
+    }
+    return items;
+  }
+
+  List<RadioItem> filterItems(List<RadioItem> items, String searchText) {
+    return searchText == ''
+        ? items
+        : items
+            .where((element) => element.nameOfStation
+                .toLowerCase()
+                .contains(searchText.toLowerCase()))
+            .toList();
+  }

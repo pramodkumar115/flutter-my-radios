@@ -1,8 +1,6 @@
 import 'dart:convert';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:my_radios/RadioLists/radio_item.dart';
 import 'package:my_radios/RadioLists/radio_item_view.dart';
 import 'package:my_radios/util/helper.util.dart';
@@ -11,16 +9,17 @@ class RadioListView extends StatefulWidget {
   final String tabType;
   final List<RadioItem> radioItems;
 
-  const RadioListView({super.key, required this.tabType, required this.radioItems});
+  const RadioListView(
+      {super.key, required this.tabType, required this.radioItems});
 
   @override
   State<RadioListView> createState() => _RadioListViewState();
 }
 
 class _RadioListViewState extends State<RadioListView> {
+  List<String> favoritesFileData = List.empty(growable: true);
   final _controller = TextEditingController();
   String searchText = '';
-  List<String> favoritesFileData = List.empty(growable: true);
 
   @override
   void initState() {
@@ -30,38 +29,31 @@ class _RadioListViewState extends State<RadioListView> {
         searchText = _controller.text;
       });
     });
+    loadData();
   }
 
-  Future<List<RadioItem>> loadData() async {
+  loadData() async {
     var favoritesString = await readFile("favorites.json");
-    if (favoritesString != null && favoritesString != "") {
-      favoritesFileData = json.decode(favoritesString);
-    }
-    print("data file $favoritesFileData");
+    List<String> favData = List.empty(growable: true);
 
-    var jsonString = await rootBundle.loadString("assets/radioList.json");
-    List<dynamic> data = json.decode(jsonString);
-    if (kDebugMode) {
-      print(data.length);
+    if (favoritesString != null && favoritesString != "") {
+      List<dynamic> favJson = json.decode(favoritesString);
+      for (var i = 0; i < favJson.length; i++) {
+        favData.add(favJson[i]);
+      }
     }
-    List<RadioItem> radioList = data.map((d) => RadioItem.fromJson(d)).toList();
-    if (kDebugMode) {
-      print("hello - ${radioList.first}");
-    }
-    return data.map((d) => RadioItem.fromJson(d)).toList();
+
+    setState(() {
+      favoritesFileData = favData;
+    });
   }
 
   @override
   Widget build(BuildContext context) {
-    final List<RadioItem> items = searchText == ''
-                ? widget.radioItems
-                : widget.radioItems
-                    .where((element) => element.nameOfStation
-                        .toLowerCase()
-                        .contains(searchText.toLowerCase()))
-                    .toList();
+    final List<RadioItem> items = filterItems(
+        getItems(widget.radioItems, widget.tabType, favoritesFileData),
+        searchText);
     return Column(children: [
-      Text(widget.tabType),
       TextField(
         controller: _controller,
         decoration: const InputDecoration(
@@ -70,11 +62,10 @@ class _RadioListViewState extends State<RadioListView> {
       Expanded(
           child: GridView.builder(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          childAspectRatio: 0.8,
           crossAxisCount: 3, // Number of columns
           crossAxisSpacing: 10.0,
-          mainAxisSpacing: 10.0,
-          childAspectRatio:
-              1.0, // Ratio of cross-axis to main-axis extent for each tile
+          mainAxisSpacing: 10.0
         ),
         itemCount: items.length, // Number of items in the grid
         padding: const EdgeInsets.all(10),
@@ -90,13 +81,21 @@ class _RadioListViewState extends State<RadioListView> {
                           MainAxisSize.max, // To keep buttons close together
                       children: [
                         IconButton(
-                          icon: const Icon(Icons.favorite_outline),
+                          icon: Icon(favoritesFileData.contains(item.id)
+                              ? Icons.favorite
+                              : Icons.favorite_outline),
                           color: Colors.white,
                           onPressed: () {
-                            print("In favorite");
-                            favoritesFileData.add(item.id);
-                            writeData("favorites.json",
-                                jsonEncode(favoritesFileData));
+                            var favData = favoritesFileData;
+                            if (favoritesFileData.contains(item.id)) {
+                              favData = favoritesFileData
+                                  .where((d) => d != item.id)
+                                  .toList();
+                            } else {
+                              favData.add(item.id);
+                            }
+                            writeData("favorites.json", jsonEncode(favData));
+                            loadData();
                             // Handle favorite button press
                           },
                         ),
@@ -116,8 +115,7 @@ class _RadioListViewState extends State<RadioListView> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) =>
-                              RadioItemView(item: item),
+                          builder: (context) => RadioItemView(item: item),
                         ),
                       );
                     },
