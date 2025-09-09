@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:my_radios/RadioLists/radio_list_view.dart';
+import 'package:my_radios/util/helper.util.dart';
+
 
 class App extends StatefulWidget {
-  const App({Key? key}) : super(key: key);
-
+  const App({super.key});
   @override
   State<App> createState() => _AppState();
 }
@@ -22,6 +23,7 @@ class _AppState extends State<App> with SingleTickerProviderStateMixin {
         searchText = _controller.text;
       });
     });
+    writeData('my_data.txt', 'Hello World!');
   }
 
   @override
@@ -41,31 +43,21 @@ class _AppState extends State<App> with SingleTickerProviderStateMixin {
           foregroundColor: Colors.black,
           title: const Text("My Radios"),
         ),
-        body: Container(
-            child: Form(
+        body: Form(
           child: Column(children: [
             TabBar(controller: tabController, tabs: const [
               Tab(text: "Radio List1"),
               Tab(text: "My Favorites"),
               Tab(text: "Playlist")
             ]),
-            Expanded (
+            Expanded(
               child: TabBarView(controller: tabController, children: const [
-              RadioListView(tabType: "radioList"),
-              RadioListView(tabType: "fav"),
-              RadioListView(tabType: "playList")
-              // Icon(Icons.directions_transit),
-              // Icon(Icons.directions_bike),
-            ]),
+                RadioListView(tabType: "radioList"),
+                RadioListView(tabType: "fav"),
+                RadioListView(tabType: "playList")
+              ]),
             )
-            // TextField(
-            //   controller: _controller,
-            //   decoration: const InputDecoration(
-            //       border: UnderlineInputBorder(),
-            //       hintText: "Search Radio Stations"),
-            // ),
-            // RadioListView(searchText: searchText)
           ]),
-        )));
+        ));
   }
 }

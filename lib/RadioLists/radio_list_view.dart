@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:my_radios/RadioLists/radio_item.dart';
 import 'package:my_radios/RadioLists/radio_item_view.dart';
+import 'package:my_radios/util/helper.util.dart';
 
 class RadioListView extends StatefulWidget {
   final String tabType;
@@ -20,6 +21,8 @@ class _RadioListViewState extends State<RadioListView> {
   final _controller = TextEditingController();
 
   String searchText = '';
+  List<String> favoritesFileData = List.empty(growable: true);
+  
   @override
   void initState() {
     super.initState();
@@ -31,6 +34,13 @@ class _RadioListViewState extends State<RadioListView> {
   }
 
   Future<List<RadioItem>> loadData() async {
+    
+    var favoritesString = await readFile("favorites.json");
+    if (favoritesString != null && favoritesString != "") {
+      favoritesFileData = json.decode(favoritesString);
+    }
+    print("data file $favoritesFileData");
+
     var jsonString = await rootBundle.loadString("assets/radioList.json");
     List<dynamic> data = json.decode(jsonString);
     if (kDebugMode) {
@@ -48,6 +58,7 @@ class _RadioListViewState extends State<RadioListView> {
     return FutureBuilder(
         future: loadData(),
         builder: (context, snapshot) {
+          print(snapshot.connectionState);
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());
           } else if (snapshot.hasError) {
@@ -72,29 +83,6 @@ class _RadioListViewState extends State<RadioListView> {
                     hintText: "Search Radio Stations"),
               ),
               Expanded(
-                  // child: ListView.builder(
-                  //     itemCount: radioItems.length,
-                  //     scrollDirection: Axis.vertical,
-                  //     shrinkWrap: true,
-                  //     itemBuilder: (context, index) {
-                  //       final item = radioItems[index];
-                  //       return ListTile(
-                  //           title: Text(item.nameOfStation),
-                  //           leading: const CircleAvatar(
-                  //             // Display the Flutter Logo image asset.
-                  //             foregroundImage:
-                  //                 AssetImage('assets/images/music.png'),
-                  //           ),
-                  //           onTap: () {
-                  //             Navigator.push(
-                  //               context,
-                  //               MaterialPageRoute(
-                  //                 builder: (context) =>
-                  //                     RadioItemView(item: item),
-                  //               ),
-                  //             );
-                  //           });
-                  //     })
                   child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 3, // Number of columns
@@ -105,46 +93,47 @@ class _RadioListViewState extends State<RadioListView> {
                 ),
                 itemCount: radioItems.length, // Number of items in the grid
                 padding: const EdgeInsets.all(10),
-
                 itemBuilder: (context, index) {
                   return ClipRRect(
-                      borderRadius: BorderRadius.circular(
-                          16.0), // Apply border radius here
-                      child: GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) =>
-                                    RadioItemView(item: radioItems[index]),
-                              ),
-                            );
-                          },
-                          child: GridTile(
-                            footer: GridTileBar(
-                              backgroundColor: Colors.black54,
-                              //title: Text('Item Title'),
-                              trailing: Row(
-                                mainAxisSize: MainAxisSize
-                                    .min, // To keep buttons close together
-                                children: [
-                                  IconButton(
-                                    icon: const Icon(Icons.favorite_outline),
-                                    color: Colors.white,
-                                    onPressed: () {
-                                      // Handle favorite button press
-                                    },
-                                  ),
-                                  IconButton(
-                                    icon: const Icon(Icons.playlist_add_circle),
-                                    color: Colors.white,
-                                    onPressed: () {
-                                      // Handle share button press
-                                    },
-                                  ),
-                                ],
-                              ),
+                      borderRadius: BorderRadius.circular(16.0),
+                      child: GridTile(
+                          footer: GridTileBar(
+                            backgroundColor: Colors.black54,
+                            trailing: Row(
+                              mainAxisSize: MainAxisSize
+                                  .max, // To keep buttons close together
+                              children: [
+                                IconButton(
+                                  icon: const Icon(Icons.favorite_outline),
+                                  color: Colors.white,
+                                  onPressed: () {
+                                    print("In favorite");
+                                    favoritesFileData.add(radioItems[index].id);
+                                    writeData("favorites.json", jsonEncode(favoritesFileData));
+                                    // Handle favorite button press
+                                  },
+                                ),
+                                IconButton(
+                                  icon: const Icon(Icons.playlist_add_circle),
+                                  color: Colors.white,
+                                  onPressed: () {
+                                    // Handle share button press
+                                    print("In playlist_add_circle");
+                                  },
+                                ),
+                              ],
                             ),
+                          ),
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      RadioItemView(item: radioItems[index]),
+                                ),
+                              );
+                            },
                             child: GridTileBar(
                                 backgroundColor: Colors.blueAccent[400],
                                 title: Center(

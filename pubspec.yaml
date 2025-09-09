@@ -41,6 +41,7 @@ dependencies:
   #url_launcher_ios: ^6.2.4
   audio_session: ^0.1.21
   webview_flutter: ^4.5.0
+  path_provider: ^2.1.4
 
 dev_dependencies:
   flutter_test:
